@@ -1,0 +1,15 @@
+body{
+    padding : 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.conainer{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

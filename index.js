@@ -1,24 +1,15 @@
-const toggleBtn = document.getElementById("themeToggle");
+function login() {
+  const name = document.getElementById("username").value;
 
-window.onload = function() {
-    const savedtheme = localStorage.getItem("theme");
-    if(savedtheme === "dark"){
-        this.document.body.classList.add("dark");
-        if(toggleBtn) toggleBtn.innerHTML = "☀️";
-    }
-};
+  if (name === "") {
+    alert("Enter your name");
+    return;
+  }
 
-//toggle theme
-if(toggleBtn){
-    toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
+  // store name
+  localStorage.setItem("username", name);
 
-        if(document.body.classList.contains("dark")){
-            localStorage.setItem("theme", "dark");
-            toggleBtn.innerHTML = "☀️";
-        }else{
-            localStorage.setItem("theme", "light");
-            toggleBtn.innerHTML = "🌙";
-        }
-    });
+  console.log("saved", name);
+  // redirect
+  window.location.href = "dashboard.html";
 }
