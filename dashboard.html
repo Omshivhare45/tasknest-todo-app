@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="dash.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <div class="container">
     <h1 id="welcome"></h1>
 
     <div class="options">
-        <button id="createTaskButton" onclick="createTask()">Create Task</button>
-        <button id="viewTasksButton" onclick="viewTasks()">View Tasks</button>
-        <button id="logoutButton" onclick="logout()">Logout</button>
+        
+        
+
+        <div id="taskSection">
+            <h2>Your Tasks</h2>
+            
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+                <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+            <h3>Task progress</h3>
+            <canvas id="taskChart" width="400" height="200"></canvas>
+            
+        </div>
+    </div>
     </div>
     <script src="dashboard.js"></script>
 </body>

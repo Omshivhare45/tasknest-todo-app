@@ -1,61 +1,79 @@
-body{
-  margin : 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-#heading{
-  color: #01472d;
-  justify-content: center;
-  text-align: center;
+/* Main card */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  background-color: #BED4CB ;
-  border-radius: 20px;
+/* Heading */
+#heading {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.login{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background-color: #BFC6C4;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
+/* Subtitle */
+.container p {
+    font-size: 14px;
+    opacity: 0.9;
 }
 
-#username{
-  padding: 10px;
-  width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Login box */
+.login {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.2);
 }
 
-#loginButton{
-  padding : 10px 20px;
-  background-color: #01472d;
-  border-radius: 8px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: 0.15s ease, box-shadow 0.15s ease;;
+/* Input */
+#username {
+    width: 285px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
-#loginButton:hover{
-  transform: scale( 0.95 );
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
- } 
+/* Focus effect */
+#username:focus {
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
 
-#loginButton:active{
- transform: scale( 0.95 );
- box-shadow: 0 px 10px rgba(0,0,0,0.2);
+/* Button */
+#loginButton {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+#loginButton:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
 }
